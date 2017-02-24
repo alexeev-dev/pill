@@ -1,0 +1,126 @@
+/* Импортируем гугл-шрифты */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic');
+
+// Используй это миксин для всего конфига!
+@mixin font-type($font-family, $font-size, $line-height, $letter-spacing) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+}
+
+// Миксин для адаптации
+@mixin respond-to($media) {
+
+	@if $media == mobile {@media (max-width: 320px) {@content;}}
+
+
+	@else if $media == xs {@media (max-width: 543px) {@content;}}
+	@else if $media == sm {@media (max-width: 767px) {@content;}}
+	@else if $media == md {@media (max-width: 991px) {@content;}}
+	@else if $media == lg {@media (max-width: 1199px) {@content;}}
+}
+
+// Миксин на подключение шрифтов
+@mixin font-face($folder, $file, $font-family) {
+
+	@font-face {
+		font-family: $font-family;
+		src: url('../fonts/' + $folder + '/' + $file + '.eot');
+		src: url('../fonts/' + $folder + '/' + $file + '.eot') format('embedded-opentype'),
+		url('../fonts/' + $folder + '/' + $file + '.woff2') format('woff2'),
+		url('../fonts/' + $folder + '/' + $file + '.woff') format('woff'),
+		url('../fonts/' + $folder + '/' + $file + '.ttf') format('truetype'),
+		url('../fonts/' + $folder + '/' + $file + '.svg##{$file}') format('svg');      
+
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		@font-face {
+			font-family: $font-family;
+			src: url('../fonts/' + $folder + '/' + $file + '.svg##{$file}') format('svg');
+		}
+	}
+}
+@include font-face(arial_rounded, ArialRoundedMTProCyr, ArialRoundedMTProCyr);
+@include font-face(arial_rounded, ArialRoundedMTProCyrBold, ArialRoundedMTProCyrBold);
+
+/* Определяем шрифты */
+$header-font: ArialRoundedMTProCyrBold, sans-serif;
+$text-font: 'Open Sans', sans-serif;
+$subtext-font: ArialRoundedMTProCyr, sans-serif;
+$sub-font: 'PT Mono', monospace;
+
+$main-color-1: #ff4444;
+$main-color-2: #648cff;
+
+/* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
+p {
+	margin-bottom: 0; /* для правильного вертикального ритма */
+}
+
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+form {
+	input,
+	select,
+	textarea {
+		-webkit-appearance: none;
+		text-overflow: ellipsis;
+		outline: none;
+
+		&:focus,
+		&:active {
+			text-overflow: ellipsis;
+		}
+	}
+
+	textarea {
+    	resize: vertical;
+	}
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* выделение текста */
+::-moz-selection {
+    background: red;
+    text-shadow: none;
+}
+
+::selection {
+    background: red;
+    text-shadow: none;
+}
+
+body {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $header-font;
+	}
+	p {
+		font-family: $text-font;
+	}
+}

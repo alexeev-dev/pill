@@ -1,0 +1,78 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-adv-1 {
+  background-image: url(sprite.png);
+  background-position: -191px -95px;
+  width: 54px;
+  height: 72px;
+}
+.icon-adv-2 {
+  background-image: url(sprite.png);
+  background-position: 0px -174px;
+  width: 74px;
+  height: 46px;
+}
+.icon-adv-3 {
+  background-image: url(sprite.png);
+  background-position: -261px 0px;
+  width: 42px;
+  height: 70px;
+}
+.icon-adv-4 {
+  background-image: url(sprite.png);
+  background-position: -92px -90px;
+  width: 69px;
+  height: 54px;
+}
+.icon-form-arrow-right {
+  background-image: url(sprite.png);
+  background-position: -74px -174px;
+  width: 44px;
+  height: 36px;
+}
+.icon-logo {
+  background-image: url(sprite.png);
+  background-position: -261px -70px;
+  width: 40px;
+  height: 40px;
+}
+.icon-order-adv-1 {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 93px;
+  height: 90px;
+}
+.icon-order-adv-2 {
+  background-image: url(sprite.png);
+  background-position: 0px -90px;
+  width: 92px;
+  height: 84px;
+}
+.icon-order-adv-3 {
+  background-image: url(sprite.png);
+  background-position: -93px 0px;
+  width: 98px;
+  height: 81px;
+}
+.icon-order-adv-4 {
+  background-image: url(sprite.png);
+  background-position: -191px 0px;
+  width: 70px;
+  height: 95px;
+}

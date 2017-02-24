@@ -1,0 +1,214 @@
+.app {
+	min-width: 320px; position: relative;
+	overflow-x: hidden;
+
+	&.fixed-section {
+		padding-bottom: 890px;
+		// padding-top: 860px;
+	}
+
+	a.to-top {
+		position: fixed; right: 60px; bottom: 60px; z-index: 6;
+
+		@include respond-to(sm) {
+			display: none;
+		}
+	}
+
+	.wr {
+		&-header {
+			position: fixed; width: 100%; left: 0; top: 0; z-index: 100; padding: 30px 0;
+			border-bottom: solid 1px rgba(255,255,255,0.3);
+			transition: top 0.3s linear;
+			a.logo {
+				@extend .clear;
+				color: #ffffff;
+				display: block;
+
+				@include respond-to(sm) {
+					width: 190px; margin: 0 auto 20px;
+				}
+
+				i {
+					float: left; margin-right: 13px;
+				}
+				p {
+					font-size: 18px; font-family: $header-font; text-transform: uppercase;
+					padding-top: 6px; 
+				}
+				span {
+					font-size: 11px; font-family: $text-font;
+					position: relative; top: -2px; left: 1px;
+				}
+			}
+			nav {
+				padding-top: 11px;
+
+				@include respond-to(md) {
+					display: none;
+				}
+
+				ul {
+					li {
+						display: inline-block; margin-right: 35px;
+
+						@include respond-to(lg) {margin-right: 15px;}
+
+						&:last-child {margin-right: 0;}
+						a {
+							color: #ffffff; font-size: 13px; font-family: $header-font;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+			a.btn {
+				position: relative; left: 19px;
+
+				@include respond-to(lg) {
+					left: -18px; width: 160px;
+				}
+				@include respond-to(md) {
+					left: 0; width: auto;
+				}
+			}
+
+			&.scrolled {
+				top: -70px;
+			}
+		}
+
+		&-intro {
+			padding: 329px 0 385px; position: relative; left: 0; top: 0; width: 100%; z-index: 2;
+			background: $main-color-1;
+			overflow: hidden;
+
+			@include respond-to(lg) {
+				padding: 260px 0 280px;
+			}
+			@include respond-to(md) {
+				padding: 180px 0 260px;
+			}
+		}
+
+		&-order {
+			padding: 144px 0 118px; position: relative; z-index: 3;
+			background: #ffffff;
+
+			@include respond-to(md) {
+				padding: 100px 0 80px;
+			}
+		}
+
+		&-video {
+			padding: 120px 0; position: relative; z-index: 3;
+			background: $main-color-2 url('../img/video-bg.png') 50% 141% no-repeat; background-size: 100%;
+
+			@include respond-to(md) {
+				padding: 80px 0;
+			}
+		}
+
+		&-testimonials {
+			padding: 115px 0 120px; position: relative; z-index: 3;
+			background: #ffffff;
+
+			@include respond-to(md) {
+				padding: 80px 0;
+			}
+		}
+
+		&-advantages {
+			padding: 120px 0; position: relative; overflow: hidden; z-index: 3;
+			background: $main-color-1; border-bottom: solid 1px rgba(255,255,255,0.3);
+
+			@include respond-to(md) {
+				padding: 80px 0;
+			}
+			@include respond-to(md) {
+				padding: 60px 0;
+			}
+		}
+
+		&-contacts {
+			padding: 58px 0 62px; position: relative; z-index: 3;
+			background: $main-color-1;
+
+			@include respond-to(sm) {
+				padding: 60px 0;
+			}
+			@include respond-to(xs) {
+				padding: 30px 0;
+			}
+		}
+
+		&-epidemic {
+			padding: 200px 0 308px;  width: 100%; overflow: hidden; z-index: 1; position: relative;
+			background: url('../img/epidemic-bg.jpg') 0 0 repeat;
+			position: fixed; left: 0; bottom: 148px;
+
+			@include respond-to(md) {
+				padding: 120px 0 260px;
+			}
+			@include respond-to(sm) {
+				padding: 80px 0 160px;
+			}
+		}
+
+		&-footer {
+			padding: 66px 0; width: 100%; z-index: 1; position: relative;
+			background: #0e0e0e;
+			position: fixed; left: 0; bottom: 0; 
+
+			.footer {
+				@extend .clear;
+				small {
+					color: #ffffff; font-size: 14px; font-family: $subtext-font;
+					float: left;
+
+					@include respond-to(sm) {
+						float: none; margin-bottom: 15px; display: block;
+					}
+
+					em {
+						color: $main-color-1;
+					}
+				}
+				ul.socials {
+					float: right;
+					@include respond-to(sm) {
+						float: none;
+					}
+					li {
+						display: inline-block; margin-right: 20px;
+						&:last-child {
+							margin-right: 0;
+						}
+						a {
+							color: #ffffff;
+
+							&:hover {
+								i {
+									transition: color 0.15s linear;
+									&.fa-facebook {
+										color: #3b5998;
+									}
+									&.fa-instagram {
+										color: #892bc1;
+									}
+									&.fa-twitter {
+										color: #33bdfd;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
