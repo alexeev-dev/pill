@@ -20,11 +20,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/sprite.css">
-	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/print.css" media="print">
 
 	<title>Coding Care</title>
 </head>
@@ -39,7 +36,7 @@
 	<!-- Application -->
 	<div class="app fixed-section">
 
-		<header class="wr-header" data-0="background-color:rgba(255,68,68,0);" data-500="background-color:rgba(255,68,68,1);">
+		<header class="wr-header js-headerBg" data-0="background-color:rgba(255,68,68,0);" data-500="background-color:rgba(255,68,68,1);">
 			<!-- header -->
 			<div class="container">
 				<div class="row">
@@ -67,23 +64,17 @@
 			</div>
 		</header>
 
-		<section class="wr-intro">
-			<div class="parallax-top" data-0="transform:translateX(0%);" data-2000="transform: translateX(50%);">
+		<section class="wr-intro main-index scrollme">
+			<div class="parallax-top js-parallax-top-fixed">
 				<img src="img/plus-top.png">
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
 
-						<div class="intro">
-							<h1><span>IT</span><em>-</em>таблетка <br class="sm-view xs-view">от бедности</h1>
-							<p>Онлайн курс бесплатных видео-уроков  для начинающих <br class="md-view sm-view">свою карьеру в сфере  информационных техологий <br>Самый верный путь к исцелению!</p>
-						</div>
+			<div class="intro js-parallax-scale">
+				<h1><span>IT</span><em>-</em>таблетка <br class="sm-view xs-view">от бедности</h1>
+				<p>Онлайн курс бесплатных видео-уроков  для начинающих <br class="md-view sm-view">свою карьеру в сфере  информационных техологий <br>Самый верный путь к исцелению!</p>
+			</div>
 
-					</div>
-				</div> <!--/row -->
-			</div> <!--/container -->
-			<div class="parallax-bottom" data-0="transform:translateX(0%);" data-1000="transform: translateX(-50%);">
+			<div class="parallax-bottom js-parallax-bottom">
 				<img src="img/intro-bottom.png">
 			</div>
 		</section> <!--/wrapper -->
@@ -96,9 +87,15 @@
 							<img src="img/doctor-left.png">
 						</figure>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 scrollme">
 
-						<div class="order-form">
+						<div class="order-form animateme" 
+					data-when="span"
+					data-from="0.5"
+					data-to="0"
+					data-opacity="0"
+					data-translatex="-200"
+					data-rotatez="90">
 							<h2>Попробуй бесплатно</h2>
 							<p>Успей получить свою дозу знаний сейчас, ведь завтра будет слишком много желающих!</p>
 							<form>
@@ -152,7 +149,7 @@
 		</section> <!--/wrapper -->
 
 		<section class="wr-video">
-			<div class="parallax-top" data-1000="transform:translateX(0%);" data-3000="transform: translateX(50%);">
+			<div class="parallax-top js-parallax-top">
 				<img src="img/plus-top.png">
 			</div>
 			<div class="container">
@@ -223,7 +220,7 @@
 		</section> <!--/wrapper -->
 
 		<section class="wr-advantages">
-			<div class="parallax-top" data-1500="transform:translateX(0%);" data-3500="transform: translateX(50%);">
+			<div class="parallax-top js-parallax-top">
 				<img src="img/plus-top.png">
 			</div>
 			<figure class="advantage-img">
@@ -302,7 +299,7 @@
 		</section> <!--/wrapper -->
 
 		<section class="wr-epidemic">
-			<div class="epidemic-img" data-3000="transform:translate(-50%,150%);" data-4000="transform: translate(-50%,0);">
+			<div class="epidemic-img js-parallax-hands">
 				<img src="img/hands.png">
 			</div>
 			<div class="container">
@@ -345,9 +342,7 @@
 	<!-- Plugins -->
 	<div class="popup"></div>
 
-	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/libs.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
