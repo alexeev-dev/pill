@@ -1,0 +1,16 @@
+{
+  "name": "coding_care",
+  "description": "coding_care-components",
+  "main": "",
+  "authors": [
+    "Alexeev"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "scrollme": "^1.1.0"
+  }
+}

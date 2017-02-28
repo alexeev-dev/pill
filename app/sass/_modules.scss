@@ -150,7 +150,7 @@
 /*********************************/
 .intro {
 	text-align: center;
-	position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+	position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(-50%,-50%);
 	h1 {
 		color: #ffffff; font-size: 48px; font-family: $header-font; text-transform: uppercase;
 		margin-bottom: 20px;
