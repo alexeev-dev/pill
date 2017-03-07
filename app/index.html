@@ -31,33 +31,69 @@
 	<![endif]-->
 
 	<!-- Preloader  -->
-	<div class="preloader"></div>
+	<div class="preloader">
+		<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+			<path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
+			  c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="2s" 
+					from="0 50 50"
+					to="360 50 50" 
+					repeatCount="indefinite" />
+			</path>
+			<path fill="#fff" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
+			  c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="1s" 
+					from="0 50 50"
+					to="-360 50 50" 
+					repeatCount="indefinite" />
+			</path>
+			<path fill="#fff" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
+			  L82,35.7z">
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="2s" 
+					from="0 50 50"
+					to="360 50 50" 
+					repeatCount="indefinite" />
+			</path>
+		</svg>
+	</div>
 
 	<!-- Application -->
-	<div class="app fixed-section">
+	<div id="top" class="app fixed-section">
 
 		<header class="wr-header js-headerBg" data-0="background-color:rgba(255,68,68,0);" data-500="background-color:rgba(255,68,68,1);">
 			<!-- header -->
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 col-sm-4 col-xs-6 col-mobile-12">
+					<div class="col-md-3 col-sm-4 sm-hide xs-hide">
 						<a href="#" class="logo">
 							<i class="icon icon-logo"></i>
 							<p>Coding Care</p>
 							<span>Будь финансово здоров</span>
 						</a>
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-7 md-hide sm-hide xs-hide">
 						<nav>
 							<ul>
-								<li><a href="#">Попробуй бесплатно</a></li>
-								<li><a href="#">Психотренинги</a></li>
-								<li><a href="#">Наши выздоровевшие</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#free" class="js-scrollButton">Попробуй бесплатно</a></li>
+								<li><a href="#training" class="js-scrollButton">Психотренинги</a></li>
+								<li><a href="#clearers" class="js-scrollButton">Наши выздоровевшие</a></li>
+								<li><a href="#contacts" class="js-scrollButton">Контакты</a></li>
 							</ul>
 						</nav>
 					</div>
-					<div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-3 col-xs-6 col-mobile-12">
+					<div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-3 col-xs-12">
 						<a href="#" class="btn">Запись на прием</a>
 					</div>					
 				</div>
@@ -70,7 +106,7 @@
 			</div>
 
 			<div class="intro js-parallax-scale">
-				<h1><span>IT</span><em>-</em>таблетка <br class="sm-view xs-view">от бедности</h1>
+				<h1><span>IT</span><em>-</em>лекарство <br class="sm-view xs-view">от бедности</h1>
 				<p>Онлайн курс бесплатных видео-уроков  для начинающих <br class="md-view sm-view">свою карьеру в сфере  информационных техологий <br>Самый верный путь к исцелению!</p>
 			</div>
 
@@ -79,23 +115,27 @@
 			</div>
 		</section> <!--/wrapper -->
 
-		<section class="wr-order">
+		<section class="wr-order" id="free">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
-						<figure class="doctor-left">
+					<div class="col-md-3 scrollme">
+						<figure class="doctor-left animateme" 
+						data-when="span"
+						data-from="0.5"
+						data-to="0"
+						data-opacity="0"
+						data-translatex="-200">
 							<img src="img/doctor-left.png">
 						</figure>
 					</div>
 					<div class="col-md-6 scrollme">
 
 						<div class="order-form animateme" 
-					data-when="span"
-					data-from="0.5"
-					data-to="0"
-					data-opacity="0"
-					data-translatex="-200"
-					data-rotatez="90">
+						data-when="span"
+						data-from="0.5"
+						data-to="0"
+						data-opacity="0"
+						data-translatey="400">
 							<h2>Попробуй бесплатно</h2>
 							<p>Успей получить свою дозу знаний сейчас, ведь завтра будет слишком много желающих!</p>
 							<form>
@@ -108,8 +148,13 @@
 						</div>
 
 					</div>
-					<div class="col-md-3">
-						<figure class="doctor-right">
+					<div class="col-md-3 scrollme">
+						<figure class="doctor-right animateme" 
+						data-when="span"
+						data-from="0.5"
+						data-to="0"
+						data-opacity="0"
+						data-translatex="200">
 							<img src="img/doctor-right.png">
 						</figure>
 					</div>
@@ -148,7 +193,7 @@
 			</div> <!--/container -->
 		</section> <!--/wrapper -->
 
-		<section class="wr-video">
+		<section class="wr-video" id="training">
 			<div class="parallax-top js-parallax-top">
 				<img src="img/plus-top.png">
 			</div>
@@ -166,8 +211,13 @@
 						</div>
 
 					</div>
-					<div class="col-md-7 col-md-offset-1">
-						<div class="video">
+					<div class="col-md-7 col-md-offset-1 scrollme">
+						<div class="video animateme"
+							data-when="span"
+							data-from="0.5"
+							data-to="0"
+							data-opacity="0"
+							data-translatex="200">
 							<img src="img/video.jpg">
 						</div>
 					</div>
@@ -175,7 +225,7 @@
 			</div> <!--/container -->
 		</section> <!--/wrapper -->
 
-		<section class="wr-testimonials">
+		<section class="wr-testimonials" id="clearers">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -219,7 +269,7 @@
 			</div> <!--/container -->
 		</section> <!--/wrapper -->
 
-		<section class="wr-advantages">
+		<section class="wr-advantages" id="contacts">
 			<div class="parallax-top js-parallax-top">
 				<img src="img/plus-top.png">
 			</div>
@@ -300,7 +350,14 @@
 
 		<section class="wr-epidemic">
 			<div class="epidemic-img js-parallax-hands">
-				<img src="img/hands.png">
+				<!-- <img src="img/hands.png"> -->
+				<ul>
+					<li data-coeff="1.6"><img src="img/hand-1.png"></li>
+					<li data-coeff="1.4"><img src="img/hand-2.png"></li>
+					<li data-coeff="1"><img src="img/hand-3.png"></li>
+					<li data-coeff="2"><img src="img/hand-4.png"></li>
+					<li data-coeff="1.3"><img src="img/hand-5.png"></li>
+				</ul>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -334,8 +391,9 @@
 			</div>
 		</footer>
 
-		<a href="#" class="to-top">
+		<a href="#top" class="js-scrollButton to-top">
 			<img src="img/rocket.png">
+			<img src="img/rocket-fire.png" class="js-moving moving-rocket">
 		</a>
 	</div>
 

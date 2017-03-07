@@ -124,4 +124,6 @@ body {
 	p {
 		font-family: $text-font;
 	}
+
+	&.onload {overflow-y: hidden;}
 }

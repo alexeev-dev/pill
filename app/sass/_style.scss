@@ -5,13 +5,28 @@
 	&.fixed-section {
 		padding-bottom: 100vh;
 		padding-top: 100vh;
+
+		@media only screen and (max-height: 500px) {
+			padding: 0;
+		}
 	}
 
 	a.to-top {
-		position: fixed; right: 60px; bottom: 60px; z-index: 6;
+		position: fixed; right: 60px; bottom: 60px; z-index: 6; display: none;
 
 		@include respond-to(sm) {
-			display: none;
+			display: none !important;
+		}
+
+		img {
+			display: block; margin: 0; padding: 0;
+			&.moving-rocket {
+				opacity: 0;
+				transition: opacity 0.2s linear;
+				&.active {
+					opacity: 1;
+				}
+			}
 		}
 	}
 
@@ -22,13 +37,18 @@
 			position: fixed; width: 100%; left: 0; top: 0; z-index: 100; padding: 30px 0;
 			border-bottom: solid 1px rgba(255,255,255,0.3);
 			transition: top 0.3s linear;
+
+			@include respond-to(sm) {
+				padding: 15px 0;
+			}
+
 			a.logo {
 				@extend .clear;
 				color: #ffffff;
 				display: block;
 
 				@include respond-to(sm) {
-					width: 190px; margin: 0 auto 20px;
+					width: 190px; margin: 0 auto;
 				}
 
 				i {
@@ -36,11 +56,11 @@
 				}
 				p {
 					font-size: 18px; font-family: $header-font; text-transform: uppercase;
-					padding-top: 6px; 
+					padding-top: 2px; margin-bottom: 0;
 				}
 				span {
 					font-size: 11px; font-family: $text-font;
-					position: relative; top: -2px; left: 1px;
+					position: relative;	display: block; margin-top: -4px; left: 1px;
 				}
 			}
 			nav {
@@ -95,6 +115,10 @@
 			@include respond-to(md) {
 				padding: 180px 0 260px;
 			}
+
+			@media only screen and (max-height: 500px) {
+				position: relative; height: auto;
+			}
 		}
 
 		&-order {
@@ -126,7 +150,12 @@
 
 		&-advantages {
 			padding: 120px 0; position: relative; overflow: hidden; z-index: 5;
-			background: $main-color-1; border-bottom: solid 1px rgba(255,255,255,0.3);
+			background: $main-color-1;
+			&:after {
+				content: '';
+				display: block; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0;
+				background: rgba(255,255,255,0.3);
+			}
 
 			@include respond-to(md) {
 				padding: 80px 0;
@@ -153,11 +182,19 @@
 			background: url('../img/epidemic-bg.jpg') 0 0 repeat;
 			position: fixed; left: 0; bottom: 148px;
 
+			@include respond-to(lg) {
+				height: calc(100vh - 100px); bottom: 100px;
+			}
+
 			@include respond-to(md) {
 				padding: 120px 0 260px;
 			}
 			@include respond-to(sm) {
-				padding: 80px 0 160px;
+				padding: 80px 0 160px; height: calc(100vh - 115px); bottom: 115px;
+			}
+
+			@media only screen and (max-height: 500px) {
+				height: auto; bottom: 85px; position: relative; bottom: 0;
 			}
 		}
 
@@ -165,6 +202,17 @@
 			padding: 66px 0; width: 100%; z-index: 1; position: relative;
 			background: #0e0e0e;
 			position: fixed; left: 0; bottom: 0;
+
+			@include respond-to(lg) {
+				padding: 40px 0;
+			}
+			@include respond-to(sm) {
+				padding: 30px 0;
+			}
+
+			@media only screen and (max-height: 500px) {
+				padding: 15px 0; position: relative;
+			}
 
 			.footer {
 				@extend .clear;
@@ -181,7 +229,7 @@
 					}
 				}
 				ul.socials {
-					float: right;
+					float: right; margin-bottom: 0;
 					@include respond-to(sm) {
 						float: none;
 					}
